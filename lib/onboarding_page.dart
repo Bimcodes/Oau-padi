@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:oau_padi/shared/constants.dart';
 import 'package:oau_padi/shared/theme/app_theme.dart';
 import 'package:oau_padi/utils/assets.gen.dart';
 
