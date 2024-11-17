@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:oau_padi/shared/routes/app_pages.dart';
@@ -26,6 +25,7 @@ class MyApp extends StatelessWidget {
       systemNavigationBarIconBrightness: Brightness.dark
     ));
     return ScreenUtilInit(
+      designSize: const Size(414,896),
       builder: (_, child)=> GetMaterialApp(
         debugShowCheckedModeBanner: false,
         enableLog: true,
