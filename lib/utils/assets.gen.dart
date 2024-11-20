@@ -14,5 +14,6 @@ class AssetsImages {
 
   final oauBackgroundImage = 'assets/images/oau_background_image.png';
   final oauLogo = 'assets/images/oau_logo.png';
-  
+  final oauPadi = 'assets/images/oau-padi-logo.png';
+  final fruitsBackground = 'assets/images/fruits_background.png';
 }

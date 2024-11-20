@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:oau_padi/shared/routes/app_pages.dart';
 import 'package:oau_padi/shared/theme/app_theme.dart';
 import 'package:oau_padi/utils/assets.gen.dart';
 
@@ -34,29 +36,31 @@ class OnboardingPage extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 48,
                         fontWeight: FontWeight.w900,
-                        color: AppTheme.statusWhite),
+                        color: AppTheme.white),
                     textAlign: TextAlign.center),
                 const Text(
                     'Get Convienient As No.1 OAU Students Convience Platform is Here!',
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w900,
-                        color: AppTheme.statusWhite70),
+                        color: AppTheme.textColor2),
                     textAlign: TextAlign.center),
                 Container(
                   width: 353.w,
                   height: 67.h,
                   padding: const EdgeInsets.all(17),
                   decoration: BoxDecoration(
-                      color: AppTheme.buttonGreen,
+                      color: AppTheme.primaryColor,
                       borderRadius: BorderRadius.circular(19)),
                   child: GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Get.toNamed(Routes.auth);
+                    },
                     child: const Text('Get Started',
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
-                            color: AppTheme.statusWhite70),
+                            color: AppTheme.textColor2),
                         textAlign: TextAlign.center),
                   ),
                 )
