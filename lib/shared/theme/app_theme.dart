@@ -27,6 +27,7 @@ class AppTheme {
   static const Color textColor9 = Color(0xff717171);
 
   static const Color buttonBlue = Color(0xff5383ec);
+  static const Color buttonDeepBlue = Color(0xff4a66ac);
 
   static const TextStyle extraLargeBold = TextStyle(
     fontFamily: 'Nunito Sans',

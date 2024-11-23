@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:oau_padi/shared/routes/app_pages.dart';
 import 'package:oau_padi/shared/theme/app_theme.dart';
 import 'package:oau_padi/ui/widgets/custom_button.dart';
+import 'package:oau_padi/ui/widgets/custom_continainer_image.dart';
+import 'package:oau_padi/ui/widgets/custom_phone_number_textfield.dart';
+import 'package:oau_padi/ui/widgets/custom_sizedbox.dart';
 import 'package:oau_padi/utils/assets.gen.dart';
 
 class AuthPage extends StatelessWidget {
@@ -17,14 +22,10 @@ class AuthPage extends StatelessWidget {
             Stack(
               children: [
                 Positioned(
-                  child: Container(
-                    width: 413.w,
-                    height: 374.h,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage(Assets.images.fruitsBackground))),
-                  ),
-                ),
+                    child: CustomContainerImage(
+                        width: 413,
+                        height: 374,
+                        path: Assets.images.fruitsBackground)),
                 Positioned(
                   left: 260.w,
                   top: 10.h,
@@ -48,13 +49,9 @@ class AuthPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.h),
-            Container(
-              width: 364.w,
-              height: 40.h,
-              margin: EdgeInsets.only(left: 20.w, right: 20.w, top: 15.h),
-              // color: Colors.red,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(1), color: Colors.red),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: PhoneNumberTextField(child: Text('Number')),
             ),
             SizedBox(height: 25.h),
             const Center(
@@ -68,30 +65,44 @@ class AuthPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20.h),
-            CustomButton(
-              onPressed: () {},
-              width: 364.w,
-              height: 67.h,
-              radius: 19,
-              backgroundColor: AppTheme.buttonBlue,
-              child: Text('Continue with Google'),
-            ),
-            CustomButton(
-              onPressed: () {},
-              width: 364.w,
-              height: 67.h,
-              radius: 19,
-              backgroundColor: AppTheme.buttonBlue,
-              child: Row(children: [
-                Container(
-                  width: 18.22.w,
-                  height: 9.65.h,
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(Assets.icons.facebookPng))),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+              child: CustomButton(
+                onPressed: () {
+                  Get.toNamed(Routes.verifyPhoneNumber);
+                },
+                width: 364.w,
+                height: 67.h,
+                radius: 19,
+                backgroundColor: AppTheme.buttonBlue,
+                child: Row(
+                  children: [
+                    CustomContainerImage(
+                        width: 25, height: 20, path: Assets.icons.googlePng),
+                    Space.w(15),
+                    const Center(child: Text('Continue with Google')),
+                  ],
                 ),
-                Text('Continue with facebook')
-              ]),
+              ),
+            ),
+            Space.h(15),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 5),
+              child: CustomButton(
+                onPressed: () {},
+                width: 364.w,
+                height: 67.h,
+                radius: 19,
+                backgroundColor: AppTheme.buttonDeepBlue,
+                child: Row(children: [
+                  CustomContainerImage(
+                      width: 25, height: 20, path: Assets.icons.facebookPng),
+                  Space.w(15),
+                  const Center(child: Text('Continue with facebook'))
+                ]),
+              ),
             )
           ]),
     );

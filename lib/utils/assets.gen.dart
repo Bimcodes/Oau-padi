@@ -10,6 +10,7 @@ class AssetsIcons {
 
   final googlePng = 'assets/icons/Google.png';
   final facebookPng = 'assets/icons/facebook.png';
+  final arrowBackstroke = 'assets/icons/arrow_backstroke.png';
 }
 
 class AssetsImages {

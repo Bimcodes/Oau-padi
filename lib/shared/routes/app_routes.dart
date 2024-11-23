@@ -5,4 +5,5 @@ abstract class Routes {
   static const onboarding = '/onboarding';
   // Auth
   static const auth = '/auth';
+  static const verifyPhoneNumber = '/auth/phone';
 }

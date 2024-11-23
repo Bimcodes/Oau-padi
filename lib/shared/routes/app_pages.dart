@@ -1,6 +1,7 @@
 import 'package:get/get.dart';
 import 'package:oau_padi/onboarding_page.dart';
 import 'package:oau_padi/sign_in.dart';
+import 'package:oau_padi/verify_phone_number.dart';
 
 part 'app_routes.dart';
 
@@ -16,5 +17,11 @@ abstract class AppPages {
       name: Routes.auth,
       page: () => const AuthPage(),
     ),
+
+    GetPage(
+      name: Routes.verifyPhoneNumber,
+      page: ()=> const VerifyPhoneNumber()
+
+    )
   ];
 }
