@@ -7,6 +7,9 @@ class Assets {
 
 class AssetsIcons {
   AssetsIcons._();
+
+  final googlePng = 'assets/icons/Google.png';
+  final facebookPng = 'assets/icons/facebook.png';
 }
 
 class AssetsImages {
